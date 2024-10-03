@@ -72,6 +72,7 @@ header h2{
 body {
   background-color: black;
 }
+
 .courses_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,7 +226,6 @@ footer{
   background-color: #111;
 }
 .format-container-footer{
-  width: 90%;
   padding: 70px 30px 20px;
 }
 
