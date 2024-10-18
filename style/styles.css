@@ -88,14 +88,24 @@ body.light-mode .courses-item_tech-box {
 }
 
 body.light-mode footer {
-  background-color: #f0f0f0;
+  background-color: #c9c9c9;
 }
 
 body.light-mode #contact{
   color: black;
 }
 
+body.light-mode .footer-nav a{
+  color: #000;
+}
+
+body.light-mode .footer-bottom{
+  background-color: white;
+  color: black;
+}
+
 body.light-mode .footer-bottom p {
+  background-color: white;
   color: black;
 }
 
@@ -280,13 +290,14 @@ footer{
   background-color: #111;
 }
 .format-container-footer{
-  padding: 70px 30px 20px;
+  padding: 20px 30px 20px;
 }
 
 .social-Icons{
   display: flex;
   justify-content: center;
 }
+
 .social-Icons a{
   text-decoration: none;
   padding: 10px;
