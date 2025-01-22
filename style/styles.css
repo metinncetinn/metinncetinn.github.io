@@ -21,7 +21,7 @@ nav ul li {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 24px;
   font:sans-serif;
 }
 nav {
@@ -36,16 +36,7 @@ nav {
   left:30%;
   right: 30%;
 }
-header h2{
-  color:aqua !important;
-  font-family: 'Marck Script';
-  font-size: 72px;
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 20px;
-}
+
 @font-face {
   font-family: "Liberty";
   src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/907368/liberty.otf');
@@ -181,7 +172,7 @@ body.light-mode .footer-bottom p {
 }  
 .about-myself h1{
   font-size: 3em;
-  color: aqua;
+  color: #00f0ff;
 }
 .about-myself p{
   color: white;
@@ -194,8 +185,8 @@ body.light-mode .footer-bottom p {
   margin: 0 auto;
 }
 .format-container h1{
-    font-size: 3em;
-  color: aqua;
+  font-size: 3em;
+  color: #00f0ff;
 }
 body {
   background-color: black;
@@ -216,21 +207,15 @@ body {
 .courses_item {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
   flex-basis: calc(33.33333% - 30px);
-
   margin: 0 15px 30px;
-
   overflow: hidden;
-
   border-radius: 28px;
 }
-
 .courses-item_link {
   display: block;
   padding: 30px 20px;
   background-color: #121212;
-
   overflow: hidden;
-
   position: relative;
 }
 
@@ -315,7 +300,7 @@ body {
   color: #FFF;
 }
 
-@media only screen and (max-width: 979px) {
+@media(max-width: 1300px) {
   .courses_item {
     -ms-flex-preferred-size: calc(50% - 30px);
     flex-basis: calc(50% - 30px);
@@ -323,32 +308,18 @@ body {
   .courses-item_title {
     font-size: 24px;
   }
-}
-
-@media only screen and (max-width: 767px) {
+  nav ul{
+    display:grid;
+    grid-template-columns: auto auto auto;
+  }
+  .about-myself{
+    width: 80%;
+  }  
   .format-container {
-    width: 96%;
-  }
-
-}
-@media only screen and (max-width: 639px) {
-  .courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .courses-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .courses-item_link {
-    padding: 22px 40px;
-  }
-  .courses-item_tech-box {
-    font-size: 16px;
+    width: 80%;
   }
 }
+
 /*FOOTER*/
 footer{
   background-color: #111;
@@ -418,15 +389,4 @@ footer{
   letter-spacing: 1px;
   font-weight: 400;
   margin: 0px 5px;
-}
-
-@media only screen and (max-width: 700px){
-  .footer-nav ul{
-    flex-direction: column;
-  }
-  .footer-nav ul li{
-    width: 100%;
-    text-align: center;
-    margin: 10px;
-  }
 }
