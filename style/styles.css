@@ -346,8 +346,16 @@ footer{
   opacity: 0.9;
 }
 /*hover social media*/
-.social-Icons a:hover{
-  background-color: #111;
+#githubbg:hover{
+  background: black;
+  transition: 0.5s;
+}
+#linkedinbg:hover{
+  background: #0078D7;
+  transition: 0.5s;
+}
+#instagrambg:hover{
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   transition: 0.5s;
 }
 .social-Icons i:hover{
