@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
       body.classList.toggle('light-mode');
   
       if (body.classList.contains('light-mode')) {
-        themeButton.classList.remove('fa-moon-o');
-        themeButton.classList.add('fa-sun-o');
+        themeButton.classList.remove('fa-moon');
+        themeButton.classList.add('fa-sun');
         document.querySelector("header").style.backgroundImage = "url('../gorsel/banner.jpg')";
       } else {
-        themeButton.classList.remove('fa-sun-o');
-        themeButton.classList.add('fa-moon-o');
+        themeButton.classList.remove('fa-sun');
+        themeButton.classList.add('fa-moon');
         document.querySelector("header").style.backgroundImage = "url('../gorsel/banner2.png')";
       }
     });
