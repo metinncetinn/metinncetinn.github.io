@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (body.classList.contains('light-mode')) {
         themeButton.classList.remove('fa-moon-o');
         themeButton.classList.add('fa-sun-o');
+        document.querySelector("header").style.backgroundImage = "url('../gorsel/banner.jpg')";
       } else {
         themeButton.classList.remove('fa-sun-o');
         themeButton.classList.add('fa-moon-o');
+        document.querySelector("header").style.backgroundImage = "url('../gorsel/banner2.png')";
       }
     });
   });

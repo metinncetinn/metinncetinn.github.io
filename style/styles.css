@@ -1,9 +1,9 @@
 /*HEADER*/
 header {
-  background-image:url('/gorsel/banner.jpg');
+  background-image:url('/gorsel/banner2.png');
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 194px;
   width: 100%;
   color: white;
   position: relative;
@@ -19,10 +19,14 @@ nav ul li {
 }
 
 nav a {
-  color: white;
+  color: rgb(35, 35, 35);
+  font-weight: bold;
   text-decoration: none;
   font-size: 24px;
   font:sans-serif;
+}
+nav a:hover{
+  color:white;
 }
 nav {
   
@@ -120,9 +124,9 @@ body.light-mode {
   color: black;
 }
 
-body.light-mode .about-myself h1,
-body.light-mode .format-container h1 {
-  color: black;
+body.light-mode nav a{
+  color: rgb(220, 220, 200);
+  font-weight: normal;
 }
 
 body.light-mode .about-myself p {
