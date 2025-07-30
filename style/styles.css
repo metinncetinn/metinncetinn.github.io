@@ -1,13 +1,165 @@
 /*HEADER*/
-
+/* GECE MODU - Yıldızlı Arkaplan (Varsayılan) */
 header {
-	background-image: url('/gorsel/banner2.png');
-	background-size: cover;
-	background-position: center;
-	height: 194px;
-	width: 100%;
-	color: white;
-	position: relative;
+    background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+    background-size: cover;
+    background-position: center;
+    height: 194px;
+    width: 100%;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.stars {
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+        22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+        38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+        53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+        68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+        83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
+        98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+        18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+        35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+        50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+        65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+        80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+        95vw 75vh 2px white;
+    animation: twinkle 8s infinite linear;
+    z-index: 1;
+}
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+        33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+        57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
+        81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
+        3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
+        27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
+        51vw 92vh 2px white, 59vw 78vh 1px white;
+    animation: twinkle 6s infinite linear reverse;
+}
+.shooting-star {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    animation: shoot 3s infinite ease-in;
+    z-index: 2;
+}
+.shooting-star:nth-child(2) {
+    top: 20%;
+    left: -100px;
+    animation-delay: 0s;
+}
+.shooting-star:nth-child(3) {
+    top: 35%;
+    left: -100px;
+    animation-delay: 1s;
+}
+.shooting-star:nth-child(4) {
+    top: 50%;
+    left: -100px;
+    animation-delay: 2s;
+}
+.shooting-star:nth-child(5) {
+    top: 65%;
+    left: -100px;
+    animation-delay: 2.5s;
+}
+.shooting-star:nth-child(6) {
+    top: 80%;
+    left: -100px;
+    animation-delay: 1.5s;
+}
+/* Yıldız animasyonları */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+@keyframes shoot {
+    0% {
+        transform: translateX(0) translateY(0) rotate(25deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(120vw) translateY(30vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+/* GÜNDÜZ MODU - Light Mode */
+body.light-mode header {
+    background-image: url("../gorsel/banner2.png");
+}
+
+/* Gündüz modunda yıldızları gizle */
+body.light-mode .stars,
+body.light-mode .shooting-star {
+    display: none;
+}
+
+body.light-mode nav a:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+body.light-mode .text .letter {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.6);
+}
+
+body.light-mode .letter-2 {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    z-index: 10;
+}
+
+.butonlar {
+    z-index: 20;
+}
+
+/* Geçiş animasyonları */
+header {
+    transition: background 0.5s ease;
+}
+
+.stars, .shooting-star {
+    transition: opacity 0.5s ease;
+}
+
+/* Responsive düzenlemeler */
+@media(max-width: 768px) {
+    .stars {
+        box-shadow: 5vw 10vh 1px white, 15vw 20vh 1px white, 25vw 30vh 1px white,
+            35vw 40vh 1px white, 45vw 50vh 1px white, 55vw 60vh 1px white,
+            65vw 70vh 1px white, 75vw 80vh 1px white, 85vw 90vh 1px white,
+            95vw 15vh 1px white;
+    }
+    
+    .shooting-star {
+        width: 50px;
+    }
 }
 nav ul {
 	list-style: none;
@@ -18,7 +170,7 @@ nav ul li {
 	margin: 0 25px;
 }
 nav a {
-	color: rgb(35, 35, 35);
+	color: #d9fdff;
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 24px;
@@ -117,31 +269,45 @@ nav {
 	font-size: 2em;
 	color: rgba(0, 0, 0);
 }
+body.light-mode .text .letter {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 1rem rgba(102, 126, 234, 0.6);
+}
 body.light-mode .dark-light i {
-	color: rgb(208, 208, 0);
+	 color: rgb(255, 193, 7);
 }
 body.light-mode {
-	background-color: white;
-	color: black;
+	background-color: #f8f9fa;
+	color: #2c3e50;
 }
 body.light-mode nav a {
 	color: rgb(220, 220, 200);
 	font-weight: normal;
 }
 body.light-mode .about-myself p {
-	color: black;
+    color: #4a5568; /* Daha yumuşak gri */
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.light-mode .courses-item {
+	background-color: #f0f0f0;
 }
 body.light-mode .courses-item_link {
 	background-color: #f0f0f0;
 }
 body.light-mode .courses-item_title {
-	color: #000;
+	color: #2d3748;
 }
-body.light-mode .courses-item_content, body.light-mode .courses-item_tech-box {
-	color: #000;
+body.light-mode .courses-item_content{
+	color: #4a5568;
+}
+body.light-mode .courses-item_tech-box {
+	color: #2d3748;
 }
 body.light-mode footer {
-	background-color: #c9c9c9;
+	background: linear-gradient(135deg, #667eea 0%, #4b4ea2 100%);
 }
 body.light-mode #contact {
 	color: black;
@@ -150,12 +316,11 @@ body.light-mode .footer-nav a {
 	color: #000;
 }
 body.light-mode .footer-bottom {
-	background-color: white;
-	color: black;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 body.light-mode .footer-bottom p {
-	background-color: white;
-	color: black;
+    color: rgba(255, 255, 255, 0.9);
 }
 /*Language*/
 .tr-en{
@@ -173,7 +338,7 @@ body.light-mode .footer-bottom p {
 }
 .about-myself h2 {
 	font-size: 3em;
-	color: #00f0ff;
+	color: #667eea;
 }
 .about-myself p {
 	color: white;
@@ -188,7 +353,7 @@ body.light-mode .footer-bottom p {
 }
 .format-container h2 {
 	font-size: 3em;
-	color: #00f0ff;
+	color: #667eea;
 }
 body {
 	background-color: black;
@@ -196,27 +361,26 @@ body {
 .courses_box {
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
-	align-items: flex-start;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 33% 34% 33%;
+	grid-row-gap: 30px;
+	grid-column-gap: 40px;
 	padding: 50px 0;
 }
 .courses_item {
+	background-color: #121212;
 	-ms-flex-preferred-size: calc(33.33333% - 30px);
 	flex-basis: calc(33.33333% - 30px);
-	margin: 0 15px 30px;
-	overflow: hidden;
-	border-radius: 28px;
+	height: 300px;
+	border-radius: 35px;
 }
 .courses-item_link {
 	display: block;
 	padding: 30px 20px;
-	background-color: #121212;
 	overflow: hidden;
 	position: relative;
+	border-radius: 28px;
+	height: 80%;
 }
 .courses-item_link:hover, .courses-item_link:hover .courses-item_tech {
 	text-decoration: none;
