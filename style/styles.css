@@ -99,11 +99,18 @@ nav {
 	}
 }
 /*btn*/
-
-.dark-light {
-	position: absolute;
+.butonlar{
+	background-color: white;
+	position:fixed;
+	display:flex;
+	gap:10px;
 	top: 20px;
 	right: 20px;
+	padding: 5px;
+	border-radius: 15px;
+}
+/*theme*/
+.dark-light {
 	cursor: pointer;
 }
 .dark-light i {
@@ -149,6 +156,14 @@ body.light-mode .footer-bottom {
 body.light-mode .footer-bottom p {
 	background-color: white;
 	color: black;
+}
+/*Language*/
+.tr-en{
+	cursor: pointer;
+}
+.tr-en i {
+	font-size: 2em;
+	color: rgba(0, 0, 0);
 }
 /*MAIN*/
 
