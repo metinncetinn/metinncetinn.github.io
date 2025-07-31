@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap');
 /*HEADER*/
 /* GECE MODU - Yıldızlı Arkaplan (Varsayılan) */
 header {
@@ -195,60 +196,21 @@ nav {
 	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/907368/liberty.otf');
 }
 .text {
-	justify-content: center;
-	font-family: 'Liberty';
-	font-weight: 100;
-	font-size: 7rem;
-	letter-spacing: -0.25em;
-	display: flex;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 110px;
+	margin-top: 20px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1;
+	color: transparent;
+	-webkit-text-stroke: 2.5px rgb(255, 193, 7);
+	text-shadow: 0 0 0 #fff;
+	transition: all 250ms;
 }
-.letter {
-	color: #d9fdff;
-	text-shadow: 0 0 2rem #00f0ff;
-	display: inline-block;
-	margin: auto 9px;
-}
-.letter-2 {
-	transform: translate(-0.2rem, 1rem) rotate(20deg);
-	animation: flicker 2s ease-in-out infinite alternate;
-}
-@keyframes flicker {
-	0% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	5% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	5.5% {
-		opacity: 0;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	6% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	6.5% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	7% {
-		opacity: 0;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	8% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
-	50% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(13deg);
-	}
-	100% {
-		opacity: 1;
-		transform: translate(-0.2rem, 1rem) rotate(10deg);
-	}
+.text:hover {
+	text-shadow: 4px 4px 0 #fff;
+	transform: translate(-2px, -2px)
 }
 /*btn*/
 .butonlar{
@@ -269,9 +231,8 @@ nav {
 	font-size: 2em;
 	color: rgba(0, 0, 0);
 }
-body.light-mode .text .letter {
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 0 1rem rgba(102, 126, 234, 0.6);
+body.light-mode .text{
+    -webkit-text-stroke: 2.5px #667eea;
 }
 body.light-mode .dark-light i {
 	 color: rgb(255, 193, 7);
@@ -281,8 +242,7 @@ body.light-mode {
 	color: #2c3e50;
 }
 body.light-mode nav a {
-	color: rgb(220, 220, 200);
-	font-weight: normal;
+	color: rgb(255, 255, 255);
 }
 body.light-mode .about-myself p {
     color: #4a5568; /* Daha yumuşak gri */
@@ -531,6 +491,7 @@ footer {
 	background-color: black;
 	padding: 20px;
 	text-align: center;
+	border-radius: 12px;
 }
 .footer-bottom p {
 	color: white;
