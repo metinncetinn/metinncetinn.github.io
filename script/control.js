@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			aboutContent: "Bilgisayar Mühendisliği lisansımı Necmettin Erbakan Üniversitesi’nde tamamladım. ASP.NET tabanlı web uygulamaları geliştiriyor, kullanıcı arayüzünden veritabanı ve iş mantığına kadar tüm süreci tek başıma yönetiyorum. Güncel teknolojileri yakından takip ediyor, masaüstü (WinForms) ve web platformlarında yalın, verimli ve sürdürülebilir yazılımlar geliştirmeye odaklanıyorum. Hedefim; gerçek problemlere sade çözümler üreten, kullanıcı deneyimini ön planda tutan, modern yazılımlar geliştirmek ve bu süreçte sürekli kendimi ileriye taşımak.",
 			projectsTitle: "Bazı Projelerim",
 			project1Title: "Sesli Sohbet Uygulaması",
-			project1Content: "Bu proje, Python kullanılarak geliştirilmiş bir sesli sohbet ve ekran paylaşma uygulamasıdır. Kullanıcılar, sesli konuşabilir, yazışabilir ve ekran paylaşabilirler. Uygulamayı kayıt olmadan kullanabilir, otomatik güncellemeleri yayınlandığında alabilirsiniz.",
+			project1Content: "Bu proje, Python kullanılarak geliştirilmiş bir sesli sohbet ve ekran paylaşma uygulamasıdır. Kullanıcılar, sesli konuşabilir, yazışabilir ve ekran paylaşabilirler. Uygulamayı kayıt olmadan kullanabilir, otomatik güncellemeleri yayınlandığında alabilirler.",
 			project2Title: "Kırp ve Konuş",
 			project2Content: "Bu proje, göz kırpma tespiti kullanarak bir bilgisayarla etkileşim kurmanın yenilikçi bir yolunu sunmaktadır. Sistem, göz kırpma tespiti için yüz ağını, soruları ve yanıtları depolamak için bir veritabanını ve iletişim için bir UDP sunucu-müşteri yapısını entegre etmektedir.",
 			project3Title: "NodeJS VNC Viewer",
